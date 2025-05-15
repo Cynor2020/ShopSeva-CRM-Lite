@@ -45,7 +45,7 @@ if (isset($_POST['login'])) {
         if (password_verify($password, $user['password'])) {
             $_SESSION['user'] = $user;
             if ($user['role'] === 'Admin') {
-                header("Location: ./AdminDashboard/admin_dashboard.php");
+                header("Location: AdminDashboard/admin_dashboard.php");
             } else {
                 header("Location: worker_dashboard.php");
             }
